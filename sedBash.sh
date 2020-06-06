@@ -54,12 +54,12 @@ then
     #read user input from pipe.
     read inputString
     #Checks if requested action is a valid exchange (single).
-    if [[ $userInput -eq "valid" ]]
+    if [[ $userInput == "valid" ]]
     then
 	#Performing the exchange using string manipulation.
         echo ${inputString/$textToReplace/$textToPaste}
     #Checks if requested action is a valid exchange (global).
-    elif [[ $userInput -eq "valid and global" ]]
+    elif [[ $userInput == "valid and global" ]]
     then
 	#String manipulation.
         echo ${inputString//$textToReplace/$textToPaste}
