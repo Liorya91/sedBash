@@ -1,4 +1,11 @@
 #!/bin/bash
+#This script implements a simplified version of sed utility in bash. Input may be given through a pipeline or the console.
+#exit codes for troubleshooting: 
+#exit 1(No argument)
+#exit 2(Pipe regex failed) 
+#exit 3(Provided file does not exist)
+#exit 4(Console regex failed)  
+#-------------------------------------------------------------------------------------------------------------
 #Help message function
 usage() {
 echo "USAGE: sedBash 's/textToReplace/textToPaste/<g>' fileName || echo "text" | sedBash 's/textToReplace/textToPaste/<g>'"
